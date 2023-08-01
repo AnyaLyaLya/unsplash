@@ -4,6 +4,7 @@ import logo from '../../img/logo.svg';
 import { SearchInput } from '../SearchInput';
 import { useAppContext } from '../../contexts/AppContext';
 import { Avatar } from '@mui/material';
+import { SiUnsplash } from 'react-icons/si';
 
 export const Header = () => {
   const { user } = useAppContext();
@@ -12,12 +13,8 @@ export const Header = () => {
     <div className='container'>
       <header className="header">
         <div className='header__box'>
-          <Link to='/'>
-            <img 
-              className='header__logo'
-              src={logo}
-              alt="Logo"
-            />
+          <Link to='/' className='header__logo'>
+            <SiUnsplash size={36}/>
           </Link>
 
           <SearchInput />

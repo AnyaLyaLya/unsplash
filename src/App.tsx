@@ -8,11 +8,13 @@ import { PhotoPage } from './Pages/PhotoPage';
 import { PageNotFound } from './Pages/PageNotFaund';
 import './App.scss';
 import { UserPage } from './Pages/UserPage';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
     <AppContextProvider>
       <Header />
+      
       <main className="mainContainer">
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -30,6 +32,8 @@ function App() {
           <Route path="/n" element={<PageNotFound />} />
         </Routes>
       </main>
+
+      <Footer />
     </AppContextProvider>   
   );
 }

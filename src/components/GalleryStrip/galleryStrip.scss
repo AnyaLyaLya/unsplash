@@ -1,4 +1,5 @@
 @import '../../styles/vars';
+@import '../../styles/mixins';
 
 .gallery-strip {
   display: grid;
@@ -10,6 +11,7 @@
   &__button {
     background-color: transparent;
     border: none;
+    margin-bottom: 6px;
   }
 
   &__img {
@@ -21,25 +23,21 @@
     &:hover {
       transform: scale(1.05);
     }
+
+    @include onMobile {
+      &:hover {
+        transform: scale(1);
+      }
+    }
   }
+}
 
-  &__photo {
-    position: relative;
-  }
+#gallery-strip__favorite-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
 
-  &__favorite-button {
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    bottom: 45px;
-    right: -20px;
-
-    font-size: 20px;
-    color: $secondary-color;
-
-    border: 1px solid $secondary-color;
-    border-radius: 5px;
-    background-color: #ffffff73;
-
-  }
+#masonry {
+  overflow: hidden;
 }

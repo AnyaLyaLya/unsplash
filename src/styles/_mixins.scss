@@ -17,8 +17,14 @@
   background-image: $background;
 }
 
+@mixin onMobile {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
 @mixin onTablet {
-  @media (min-width: 768px) {
+  @media (min-width: 600px) {
     @content;
   }
 }
